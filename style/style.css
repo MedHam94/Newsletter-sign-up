@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(/assets/fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(/assets/fonts/Roboto-Regular.ttf);
+}
+body {
+  background: #36384d;
+  font-family: Roboto-Regular;
+}
+body .container {
+  background: white;
+  max-width: 900px;
+  height: 633px;
+  display: flex;
+  gap: 60px;
+  padding: 20px 40px;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+body .container .left {
+  width: 400px;
+  padding-left: 20px;
+}
+body .container .left h1 {
+  font-size: 50px;
+  font-family: Roboto-Bold;
+}
+body .container .left p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+body .container .left ul {
+  padding: 0;
+}
+body .container .left ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+body .container .left ul li svg {
+  display: inline-block;
+}
+body .container .left ul li p {
+  display: inline-block;
+  padding-left: 14px;
+  font-size: 14px;
+}
+body .container .left form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+body .container .left form label {
+  display: block;
+  font-weight: bold;
+  font-size: 13px;
+}
+body .container .left form input {
+  height: 45px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding-left: 20px;
+  font-family: Roboto-Bold;
+}
+body .container .left form button {
+  background: #232742;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 45px;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
