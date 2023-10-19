@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(/assets/fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(/assets/fonts/Roboto-Regular.ttf);
+}
+* {
+  padding: 10px 0;
+}
+
+body {
+  background: #36384d;
+  font-family: Roboto-Regular;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+body .container {
+  background: white;
+  max-width: 400px;
+  height: auto;
+  border-radius: 30px;
+  padding: 20px 40px;
+}
+body .container h1 {
+  margin: 0;
+  font-size: 40px;
+  color: #252840;
+}
+body .container p {
+  line-height: 1.5;
+  font-size: 14px;
+}
+body .container button {
+  background: #232742;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  width: 100%;
+  margin: 28px 0;
+  padding: 15px 0;
+}/*# sourceMappingURL=success.css.map */

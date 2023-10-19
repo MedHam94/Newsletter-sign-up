@@ -15,6 +15,16 @@
 body {
   background: #36384d;
   font-family: Roboto-Regular;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    height: 100%;
+  }
 }
 body .container {
   background: white;
@@ -24,14 +34,38 @@ body .container {
   gap: 60px;
   padding: 20px 40px;
   border-radius: 30px;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
+}
+@media screen and (max-width: 768px) {
+  body .container {
+    flex-direction: column-reverse;
+    max-width: 90%;
+    height: -moz-max-content;
+    height: max-content;
+    gap: 20px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: flex-end;
+    margin: auto 0;
+    padding: 20px 40px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body .container {
+    max-width: 100%;
+    padding: 0;
+    border-radius: 0;
+    height: 100vh;
+    font-size: 10px;
+  }
 }
 body .container .left {
   width: 400px;
-  padding-left: 20px;
+  padding: 0 20px;
+}
+@media screen and (max-width: 420px) {
+  body .container .left {
+    width: 100%;
+  }
 }
 body .container .left h1 {
   font-size: 50px;
@@ -56,6 +90,7 @@ body .container .left ul li p {
   display: inline-block;
   padding-left: 14px;
   font-size: 14px;
+  margin: 5px;
 }
 body .container .left form {
   display: flex;
@@ -80,6 +115,11 @@ body .container .left form input {
   font-family: Roboto-Bold;
   cursor: pointer;
 }
+@media screen and (max-width: 420px) {
+  body .container .left form input {
+    width: 95%;
+  }
+}
 body .container .left form button {
   background: #232742;
   color: white;
@@ -89,6 +129,45 @@ body .container .left form button {
   font-weight: bold;
   cursor: pointer;
 }
+@media screen and (max-width: 420px) {
+  body .container .left form button {
+    width: 95%;
+  }
+}
 body .container .left form button:hover {
   background-image: linear-gradient(to right, #ff5377, #ff673e);
+}
+body .container .right .desktop-svg-container {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  body .container .right .desktop-svg-container {
+    display: none;
+  }
+}
+body .container .right .mobile-svg-container {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  body .container .right .mobile-svg-container {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .container .right .mobile-svg-container img {
+    max-width: 350px;
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body .container .right .mobile-svg-container img {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+body .container .right .mobile-svg-container g {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

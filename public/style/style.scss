@@ -1,3 +1,6 @@
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 420px;
+
 *,
 *::before,
 *::after {
@@ -16,22 +19,50 @@
 body{
     background: #36384d;
     font-family: Roboto-Regular;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    @media screen and (max-width : $breakpoint-tablet){
+        margin: 0;
+        height: 100%;
+    }
     .container{
         background: white;
         max-width: 900px;
+        // min-width: 500px;
         height: 633px;
         display: flex;
         gap: 60px;
         padding: 20px 40px;
         border-radius: 30px;
-        position: absolute;
-        top: 50%; 
-        right: 50%;
-        transform: translate(50%,-50%);
+        
+        @media screen and (max-width : $breakpoint-tablet) {
+            flex-direction: column-reverse;
+            max-width: 90%;
+            height:max-content;
+            gap: 20px;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: flex-end;
+            margin: auto 0;
+            padding: 20px 40px;
+        }
+        @media screen and (max-width: $breakpoint-mobile) {
+            max-width: 100%;
+            padding: 0;
+            border-radius: 0;
+            height: 100vh;
+            font-size: 10px;
+        }
+        
         .left{
             width: 400px;
-            padding-left: 20px;
-
+            padding: 0 20px;
+            @media screen and (max-width: $breakpoint-mobile) {
+                width: 100%;
+            }
             h1{
                 font-size: 50px;
                 font-family: Roboto-Bold;
@@ -46,6 +77,7 @@ body{
                     list-style: none;
                     display: flex;
                     align-items: center;
+                    
                     svg{
                         display: inline-block;
                     }
@@ -53,6 +85,7 @@ body{
                         display: inline-block;
                         padding-left: 14px;
                         font-size: 14px;
+                        margin: 5px;
                     }
                 }
             }
@@ -81,6 +114,9 @@ body{
                     padding-left: 20px;
                     font-family: Roboto-Bold;
                     cursor: pointer;
+                    @media screen and (max-width: $breakpoint-mobile) {
+                        width: 95%;
+                    }
                 }
                 button{
                     background: #232742;
@@ -90,12 +126,50 @@ body{
                     height: 45px;
                     font-weight: bold;
                     cursor: pointer;
+                    @media screen and (max-width: $breakpoint-mobile) {
+                        width: 95%;
+                    }
                 }
                 button:hover{
                     background-image: linear-gradient(to right,#ff5377, #ff673e);
                 }
             }
         }
+        .right{
+            .desktop-svg-container{
+                width: 100%;
+                height: auto;
+                @media  screen and (max-width : $breakpoint-tablet) {
+                    display: none;
+                }
+            }
+            .mobile-svg-container{
+                display: none;
+                width: 100%;
+                height: auto;
+                @media screen and (max-width: $breakpoint-tablet) {
+                    display: block;
+                }
+                img{
+                    @media screen and (max-width : $breakpoint-tablet) {
+                        
+                        max-width: 350px;
+                        border-radius: 10px;
+                        // width:100%;
+                    }
+                    @media screen and (max-width: $breakpoint-mobile) {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    
+                }
+                g{
+                    width: 100%;
+                }
+            }
+            
+        }
+        
     }
 }
 
