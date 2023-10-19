@@ -62,10 +62,15 @@ body .container .left form {
   flex-direction: column;
   gap: 14px;
 }
-body .container .left form label {
-  display: block;
+body .container .left form div {
+  display: flex;
+  justify-content: space-between;
   font-weight: bold;
   font-size: 13px;
+}
+body .container .left form div span {
+  color: red;
+  display: none;
 }
 body .container .left form input {
   height: 45px;
@@ -73,6 +78,7 @@ body .container .left form input {
   border-radius: 5px;
   padding-left: 20px;
   font-family: Roboto-Bold;
+  cursor: pointer;
 }
 body .container .left form button {
   background: #232742;
@@ -81,4 +87,8 @@ body .container .left form button {
   border-radius: 5px;
   height: 45px;
   font-weight: bold;
+  cursor: pointer;
+}
+body .container .left form button:hover {
+  background-image: linear-gradient(to right, #ff5377, #ff673e);
 }/*# sourceMappingURL=style.css.map */
