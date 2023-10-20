@@ -4,17 +4,9 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: Roboto-Bold;
-  src: url(/assets/fonts/Roboto-Bold.ttf);
-}
-@font-face {
-  font-family: Roboto-Regular;
-  src: url(/assets/fonts/Roboto-Regular.ttf);
-}
 body {
   background: #36384d;
-  font-family: Roboto-Regular;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   display: flex;
   align-items: center;

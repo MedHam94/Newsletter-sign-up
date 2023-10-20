@@ -4,17 +4,9 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: Roboto-Bold;
-  src: url(/assets/fonts/Roboto-Bold.ttf);
-}
-@font-face {
-  font-family: Roboto-Regular;
-  src: url(/assets/fonts/Roboto-Regular.ttf);
-}
 body {
   background: #36384d;
-  font-family: Roboto-Regular;
+  font-family: "Roboto", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +61,8 @@ body .container .left {
 }
 body .container .left h1 {
   font-size: 50px;
-  font-family: Roboto-Bold;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 body .container .left p {
   font-size: 14px;
@@ -112,8 +105,9 @@ body .container .left form input {
   border: 1px solid gray;
   border-radius: 5px;
   padding-left: 20px;
-  font-family: Roboto-Bold;
+  font-family: "Roboto", sans-serif;
   cursor: pointer;
+  font-weight: bold;
 }
 @media screen and (max-width: 420px) {
   body .container .left form input {
