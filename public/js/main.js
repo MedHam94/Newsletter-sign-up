@@ -1,4 +1,4 @@
-async function validateEmail() {
+function validateEmail() {
   let email = document.getElementById("email");
 
   const errMsg = document.getElementById("errMsg");
