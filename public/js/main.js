@@ -4,7 +4,7 @@ function validateEmail() {
   const errMsg = document.getElementById("errMsg");
 
   if (email.checkValidity()) {
-    fetch("/public/success.html")
+    fetch("./success.html")
       .then((res) => res.text())
       .then((html) => {
         document.open();
