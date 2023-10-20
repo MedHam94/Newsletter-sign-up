@@ -41,6 +41,7 @@ body{
             margin: 0;
             font-size: 40px;
             color: #252840;
+            margin-top: 30px;
         }
         p{
             line-height: 1.5;
@@ -55,6 +56,10 @@ body{
             width: 100%;
             margin: 28px 0;
             padding: 15px 0;
+            cursor: pointer;
+        }
+        button:hover{
+            background-image: linear-gradient(to right,#ff5377, #ff673e);
         }
     }
 }

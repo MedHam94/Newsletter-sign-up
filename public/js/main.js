@@ -1,20 +1,20 @@
-// let email = document.querySelector("button").value;
-// let errorMsg = document.querySelector("#errMsg");
-
-function validateEmail() {
+async function validateEmail() {
   let email = document.getElementById("email");
 
   const errMsg = document.getElementById("errMsg");
 
-  if (!email.checkValidity()) {
+  if (email.checkValidity()) {
+    fetch("/public/success.html")
+      .then((res) => res.text())
+      .then((html) => {
+        document.open();
+        document.write(html);
+        document.close();
+      });
+  } else {
     errMsg.style.display = "block";
     email.style.background = "#ffe8e6";
     email.style.color = "hsl(4, 100%, 67%)";
     email.style.borderColor = "hsl(4, 100%, 67%)";
-  } else {
-    errMsg.style.display = "none";
-    email.style.background = "";
-    email.style.color = "";
-    email.style.borderColor = "";
   }
 }
